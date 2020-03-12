@@ -1,0 +1,152 @@
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1;
+  }
+  
+  textarea{
+    background: transparent;
+    border: none;
+    resize: none;
+    color: #000000;
+    border-left: 1px solid black;
+    padding: 10px;
+  }
+  
+  .jumbotron {
+    text-align: center;
+    background-color: transparent;
+    color: black;
+    border-radius: 0;
+    border-bottom: 10px solid black;
+  }
+  
+  .description{
+    white-space: pre-wrap;
+  }
+  
+  .time-block{
+    text-align: center;
+    border-radius: 15px;
+  }
+  
+  .row {
+    white-space: pre-wrap;
+    height: 80px;
+    border-top: 1px solid white;;
+  }
+  
+  .hour {
+    background-color: #ffffff;
+    color: #000000;
+    border-top: 1px dashed #000000;
+  }
+  
+  .past {
+    background-color: #d3d3d3;
+    color: white;
+  }
+  
+  .present {
+    background-color: #ff6961;
+    color: white;
+  }
+  
+  .future {
+    background-color: #77dd77;
+    color: white;
+  }
+  
+  .saveBtn {
+    border-left: 1px solid black;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: #06AED5;
+    color: white;
+  }
+  
+  .saveBtn i:hover {
+    font-size: 20px;
+    transition: all .3s ease-in-out;
+  }
+
+
+
+
+
+
+
+
+
+/* #block-9, #block-10, #block-11,
+#block-12, #block-13, #block-14, 
+#block-15, #block-16, #block-17,
+#block-18{
+border-radius: 15px;
+
+} */
+
+
+/* #block-9{
+background-color: blue;
+}
+
+#block-10{
+    background-color: lightgreen;
+}
+
+#block-11{
+    background-color: lightgrey;
+}
+
+#block-12{
+    background-color: lightgoldenrodyellow;
+}
+
+#block-13{
+    background-color: lightpink;
+}
+
+#block-14{
+    background-color: lightsteelblue;
+}
+
+#block-15{
+    background-color: lightyellow;
+}
+
+#block-16{
+    background-color:rgb(185, 176, 176) ;
+}
+
+#block-17{
+    background-color: lightskyblue;
+}
+
+#block-18{
+    background-color: lightseagreen;
+}
+
+.row{
+    height: 100px;
+    border-radius: 15px;
+    margin-bottom: 5px;
+}
+
+.col{
+    border-right: lightslategrey;
+    
+}
+
+.future{
+    background-color: lightgreen;
+}
+
+.past{
+    background-color: lightslategray;
+}
+
+.present{
+    background-color: rgb(25, 111, 139);
+} */
