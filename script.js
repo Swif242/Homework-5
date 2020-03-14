@@ -4,7 +4,7 @@ $(document).ready(function () {
     var currentDay = moment().format("MMM-DD-YYYY");
     console.log(currentDay)
     // current time variable -1 hr
-    var currentTime = moment().format('H') - 1;
+    var currentTime = moment().format('H') - 1 ;
     var submit = document.querySelectorAll(".saveBtn");
     var hours = ["9", "10", "11", "12", "13", "14", "15", "16", "17", "18"];
 
@@ -45,13 +45,13 @@ $(document).ready(function () {
             //
             if (parseInt(hours[i]) === currentTime) {
                 //    added classes based on if statement boolean
-                $(".hour").addClass("present");
+                $("#" + hours[i]).addClass("present");
             }
             else if (parseInt(hours[i]) < currentTime) {
-                $(".hour").addClass("past");
+                $("#" + hours[i]).addClass("past");
             }
             else {
-                $(".hour").addClass("future");
+                $("#" + hours[i]).addClass("future");
             }
         };
 
