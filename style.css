@@ -3,11 +3,12 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     line-height: 1;
+    padding-bottom: 100px;
   }
   
   textarea{
     background: transparent;
-    background-color: lightsteelblue;
+    background-color: rgb(222, 230, 240);
     /* border: none; */
     resize: none;
     color: #000000;
@@ -42,6 +43,7 @@ body {
     background-color: #ffffff;
     color: #000000;
     border-top: 1px dashed #000000;
+    padding-top: 15px;
   }
   
   .past {
@@ -67,7 +69,7 @@ body {
     color: white;
   }
   
-  .saveBtn i:hover {
+  .saveBtn:hover {
     font-size: 20px;
     transition: all .3s ease-in-out;
   }
@@ -80,74 +82,3 @@ body {
 
 
 
-/* #block-9, #block-10, #block-11,
-#block-12, #block-13, #block-14, 
-#block-15, #block-16, #block-17,
-#block-18{
-border-radius: 15px;
-
-} */
-
-
-/* #block-9{
-background-color: blue;
-}
-
-#block-10{
-    background-color: lightgreen;
-}
-
-#block-11{
-    background-color: lightgrey;
-}
-
-#block-12{
-    background-color: lightgoldenrodyellow;
-}
-
-#block-13{
-    background-color: lightpink;
-}
-
-#block-14{
-    background-color: lightsteelblue;
-}
-
-#block-15{
-    background-color: lightyellow;
-}
-
-#block-16{
-    background-color:rgb(185, 176, 176) ;
-}
-
-#block-17{
-    background-color: lightskyblue;
-}
-
-#block-18{
-    background-color: lightseagreen;
-}
-
-.row{
-    height: 100px;
-    border-radius: 15px;
-    margin-bottom: 5px;
-}
-
-.col{
-    border-right: lightslategrey;
-    
-}
-
-.future{
-    background-color: lightgreen;
-}
-
-.past{
-    background-color: lightslategray;
-}
-
-.present{
-    background-color: rgb(25, 111, 139);
-} */

@@ -11,7 +11,7 @@ $(document).ready(function () {
 
 
     // setting current day to the jumbotron
-    $("#currentDay").text(currentDay);
+    $("#currentDay").text("Today is " + currentDay);
 
 
 
