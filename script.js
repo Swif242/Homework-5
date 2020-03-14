@@ -1,67 +1,63 @@
 
 $(document).ready(function () {
-    var blocks = document.querySelectorAll(".row");
-    var timeBlock = document.querySelectorAll(".timeblock");
     var submit = document.querySelectorAll(".saveBtn");
     var textBox = document.querySelectorAll("description");
     textBox.textContent = localStorage.getItem("data-time");
-    var hours = ["9am", "10am", "11am"];
-    // current time function
+    var hours = ["9", "10", "11", "12", "13", "14", "15", "16", "17", "18"];
+    // current date variable
     var currentDay = moment().format("MMM-DD-YY");
+    // current time variable -1 hr
+    var currentTime = moment().format('H') - 1;
+
+
+    // setting current day to the jumbotron
     $("#currentDay").text(currentDay);
 
 
 
-    // calling function to retrieve data
-
-
-    //  code block to store data
+    //  code block to store data when pushing submit button
     $(submit).on("click", function () {
         var time = $(this).attr("data-time")
         var inputBox = $("#" + time);
-        var details = inputBox.val()
+        var details = inputBox.val();
 
-        localStorage.setItem(time, details)
+        localStorage.setItem(time, details);
 
-        //  attempt to retrieve stored data
+    });
 
 
-    })
+
+    // function containing a for loop to grab from hours array and match up to the hour ID's
+    // to get from local storage
 
     function latestInfo() {
         for (i = 0; i < hours.length; i++) {
             console.log(localStorage.getItem(hours[i]))
             $("#" + hours[i]).text(localStorage.getItem(hours[i]));
-        }
-        //    textBox.textContent = 
-        //    console.log(localStorage.getItem(details));
+            //
+            if (parseInt(hours[i]) === currentTime) {
+                //    added classes based on if statement boolean
+                $(".hour").addClass("present");
+            }
+            else if (parseInt(hours[i]) < currentTime) {
+                $(".hour").addClass("past");
+            }
+            else {
+                $(".hour").addClass("future");
+            }
+        };
 
-    }
+    };
 
     latestInfo();
-    // function timeCheck (){
 
 
-    // if( timeBlock.innertext < moment()){
-    //      blocks.addClass("past");
-    // };
-    // else if (timeBlock.text > moment()){
-    //     blocks.addClass(".future");
-    // }
-    // else{
-    //     blocks.addClass(".present");
-    // }
-
-    // };
+    // testing idea of using military time to avoid issue with comparing am/pm
+    // 
+    console.log(currentTime);
+    console.log(parseInt("20") === currentTime);
 
 
 
 
-    //  different attempts to get stored data
-
-    // $("9am").val(localStorage.getItem("9"));
-
-    // $("textBox").val(localStorage.getItem("9"));
-    // $("data-time").val(localStorage.getItem(latestInfo));
-    // $("input10").val(localStorage.getItem("10"));
 });
