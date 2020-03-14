@@ -1,13 +1,12 @@
 
 $(document).ready(function () {
-    var submit = document.querySelectorAll(".saveBtn");
-    var textBox = document.querySelectorAll("description");
-    textBox.textContent = localStorage.getItem("data-time");
-    var hours = ["9", "10", "11", "12", "13", "14", "15", "16", "17", "18"];
     // current date variable
-    var currentDay = moment().format("MMM-DD-YY");
+    var currentDay = moment().format("MMM-DD-YYYY");
+    console.log(currentDay)
     // current time variable -1 hr
     var currentTime = moment().format('H') - 1;
+    var submit = document.querySelectorAll(".saveBtn");
+    var hours = ["9", "10", "11", "12", "13", "14", "15", "16", "17", "18"];
 
 
     // setting current day to the jumbotron
@@ -15,11 +14,14 @@ $(document).ready(function () {
 
 
     // function to clear the local storage to make a clean slate for the next day
-    function newDay (){
-        if( currentDay = currentDay++ ){
-            localStorage.clear()
-        }
-    }
+    // function newDay (){
+    //     var cleanSlate = currentDay ++;
+    //     if( cleanSlate = true ){
+    //         localStorage.clear()
+    //     }
+    // }
+
+
 
     //  code block to store data when pushing submit button
     $(submit).on("click", function () {
@@ -56,7 +58,7 @@ $(document).ready(function () {
     };
 
     latestInfo();
-    newDay();
+    // newDay();
 
     // testing idea of using military time to avoid issue with comparing am/pm
     // 
