@@ -4,7 +4,7 @@ $(document).ready(function () {
     var currentDay = moment().format("MMM-DD-YYYY");
     console.log(currentDay)
     // current time variable -1 hr
-    var currentTime = moment().format('H') - 1 ;
+    var currentTime = moment().format('H')  ;
     var submit = document.querySelectorAll(".saveBtn");
     var hours = ["9", "10", "11", "12", "13", "14", "15", "16", "17", "18"];
 
