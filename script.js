@@ -14,6 +14,12 @@ $(document).ready(function () {
     $("#currentDay").text("Today is " + currentDay);
 
 
+    // function to clear the local storage to make a clean slate for the next day
+    function newDay (){
+        if( currentDay = currentDay++ ){
+            localStorage.clear()
+        }
+    }
 
     //  code block to store data when pushing submit button
     $(submit).on("click", function () {
@@ -50,7 +56,7 @@ $(document).ready(function () {
     };
 
     latestInfo();
-
+    newDay();
 
     // testing idea of using military time to avoid issue with comparing am/pm
     // 
