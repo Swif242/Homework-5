@@ -18,7 +18,7 @@ $(document).ready(function () {
     $("#currentDay").text("Today is " + currentDay);
 
 
-    // function to clear the local storage to make a clean slate for the next day
+    // added callback function to clear the local storage to make a clean slate for the next day
     $(clear).on("click",function(){
         
         localStorage.clear()
@@ -46,9 +46,9 @@ $(document).ready(function () {
         for (i = 0; i < hours.length; i++) {
             console.log(localStorage.getItem(hours[i]))
             $("#" + hours[i]).text(localStorage.getItem(hours[i]));
-            //
+            
+            // added class colors based on if statement 
             if (parseInt(hours[i]) === currentTime) {
-                //    added classes based on if statement boolean
                 $("#" + hours[i]).addClass("present");
             }
             else if (parseInt(hours[i]) < currentTime) {
