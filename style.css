@@ -75,6 +75,27 @@ body {
   }
 
 
+  #clearbtn {
+    font-weight: bold;
+    padding-top: 5px;
+    text-align: center;
+    border-radius: 15px;
+    white-space: pre-wrap;
+    height: 50px;
+    border-top: 1px solid white;
+     border: 1px solid black;
+    background-color: lightsteelblue;
+  }
+
+  #clearbtn:hover{
+    font-size: 20px;
+    transition: all .3s ease-in-out;
+   
+  }
+
+
+
+
   @media screen and (min-width: 320px) {
 
     body{

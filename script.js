@@ -1,10 +1,15 @@
 
 $(document).ready(function () {
+    // button variables
+    var clear = document.getElementById("clearbtn");
+    var submit = document.querySelectorAll(".saveBtn");
+
     // current date variable
     var currentDay = moment().format("MMM-DD-YYYY");
     console.log(currentDay)
-    // current time variable -1 hr
-    var currentTime = moment().format('H')  ;
+
+    // current time variable hr
+    var currentTime = moment().format('H');
     var submit = document.querySelectorAll(".saveBtn");
     var hours = ["9", "10", "11", "12", "13", "14", "15", "16", "17", "18"];
 
@@ -14,12 +19,11 @@ $(document).ready(function () {
 
 
     // function to clear the local storage to make a clean slate for the next day
-    // function newDay (){
-    //     var cleanSlate = currentDay ++;
-    //     if( cleanSlate = true ){
-    //         localStorage.clear()
-    //     }
-    // }
+    $(clear).on("click",function(){
+        
+        localStorage.clear()
+    
+    });
 
 
 
@@ -58,7 +62,7 @@ $(document).ready(function () {
     };
 
     latestInfo();
-    // newDay();
+
 
     // testing idea of using military time to avoid issue with comparing am/pm
     // 
