@@ -48,7 +48,7 @@ $(document).ready(function () {
             $("#" + hours[i]).text(localStorage.getItem(hours[i]));
             
             // added class colors based on if statement 
-            if (parseInt(hours[i]) === currentTime) {
+            if (parseInt(hours[i]) == currentTime) {
                 $("#" + hours[i]).addClass("present");
             }
             else if (parseInt(hours[i]) < currentTime) {
